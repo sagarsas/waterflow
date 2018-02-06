@@ -1,0 +1,219 @@
+body {margin:0;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #106381;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.active {
+  background-color: #75b5ce;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+}
+
+.bgdefultcolor{ 
+	height:auto;
+	background-color:#095a9d;
+	
+}
+
+.font-colorsp{
+	color:#fff;
+}
+
+.displinhrt{
+	display:initial;
+	}
+	
+.fa {
+  
+  font-size: 19px!important;
+  width: 41px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+
+.fa:hover {
+    opacity: 0.7;
+	text-decoration:none;
+}
+
+.fa-facebook {
+;
+  color: white;
+}
+
+.fa-twitter {
+
+  color: white;
+}
+
+
+.fa-twitter:hover {
+  color:#1da1f2;
+}
+.fa-google {
+ 
+  color: white;
+}
+
+.fa-google:hover {
+ 
+  color: #dc4a38;
+}
+
+.fa-linkedin {
+
+  color: white;
+}
+
+.product{
+	padding:30px 36px!important;
+	}
+.widthsp{
+	width:100%;
+	
+}
+
+.flotrightsp{
+	float:right;
+}
+
+.titlesp{
+	font-size:22px;
+	color:#1c3e44;
+	font-family:'Roboto Condensed', sans-serif;
+}
+
+.tit-border{
+	border-bottom:3px solid #cccccc;
+	padding-bottom: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.shadow{
+	box-shadow: 10px 10px 8px #9f9f9f;
+}
+
+.padd-sp{
+	padding-top:10px;
+}
+
+.rntcolr{
+	margin:0px;
+	color:#095a9d;
+}
+
+.fontbold{
+    font-weight: bold;
+}
+
+.font-colors{
+	color:#9f9f9f;
+}
+
+
+.fixed-bg {
+    background: url("../images/background.png");
+    min-height: auto;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-color:#095a9d;
+	padding:100px;
+}
+
+.iconspe{
+	border: 3px solid #fff;
+	height: auto;
+	text-align: center;
+	color: #fff;
+	width: 15%;
+	padding:18px;
+	margin: 9px;
+}
+
+.iconbigsp{
+	text-align:center;
+	
+}
+
+.secthowitwork{
+	background-color:#e3e3e3;
+	padding:100px;
+}
+
+.howitwork{
+	padding:80px;
+
+}
+
+
+li{
+	text-decoration:none;
+	list-style: none;
+}
+
+.titleline{
+	font-size:28px;
+	text-align:center;
+	font-weight:bold;
+	font-family:'Roboto Condensed', sans-serif;
+
+
+
+}
+
+.titistyle{
+	border-width:3px;  padding:10px;  border-style:dotted solid; border-color:#095a9d;
+	
+}
