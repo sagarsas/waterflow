@@ -1,0 +1,45 @@
+
+
+
+.header{
+    background-color: #095a9d;
+}
+
+.page-content{
+    background-color: #f3f4f5;
+}
+
+.container{
+/*    background-color: white;*/
+}
+
+.pdt-right{
+    padding: 20px;
+}
+.specs-card table tr td:first-child{
+    font-weight: bold;
+}
+.fa-check-circle-o{
+    color: mediumseagreen;
+}
+.product-row{
+    box-shadow: 0 2px 4px 0 rgba(35, 36, 37, 0.3);
+  border: solid 1px #f4f5f7;
+    margin-top: 50px;
+}
+.fa-tint{
+    color: #095a9d;
+}
+.banner{
+/*    border: 1px outset #095a9d;*/
+    padding: 10px;
+    line-height: 20px;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: capitalize;
+    color: white;
+}
+.banner-container{
+    padding-top: 60px;
+    
+}
