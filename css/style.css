@@ -56,12 +56,12 @@ body {margin:0;
 
 .bgdefultcolor{ 
 	height:auto;
-	background-color:#095a9d;
+	background-color:#034a84;
 	
 }
 
 .font-colorsp{
-	color:#fff;
+	color:#fff!important;
 }
 
 .displinhrt{
@@ -112,7 +112,7 @@ body {margin:0;
 }
 
 .product{
-	padding:30px 36px!important;
+	padding:12px 36px!important;
 	}
 .widthsp{
 	width:100%;
@@ -217,3 +217,11 @@ li{
 	border-width:3px;  padding:10px;  border-style:dotted solid; border-color:#095a9d;
 	
 }
+
+.footersp li {
+	color:#fff;
+	
+	
+}
+
+
