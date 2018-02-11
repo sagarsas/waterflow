@@ -1,4 +1,5 @@
-body {margin:0;
+body {
+	
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -22,6 +23,20 @@ body {margin:0;
   text-decoration: none;
 }
 
+.footerlink li a{
+	color:#fff;
+	text-decoration:none;
+}
+a{
+	text-decoration:none;
+}
+.footerlink{
+	color:#fff;
+	line-height:2;
+}
+.footerlink a:hover{
+	color:#b9b9b9;
+}
 /*
 .active {
   background-color: #75b5ce;
@@ -225,5 +240,7 @@ li{
 	
 	
 }
+
+
 
 
