@@ -3,26 +3,82 @@ body {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
-.topnav {
-  overflow: hidden;
+/**********************************
+Responsive navbar-brand image CSS
+- Remove navbar-brand padding for firefox bug workaround
+- add 100% height and width auto ... similar to how bootstrap img-responsive class works
+***********************************/
 
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
 }
 
-.topnav a {
-  float: left;
-  display: block;
-  color: #106381;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+	background-color:#034a84!important;
 }
 
-.topnav a:hover {
-  color: black;
-  text-decoration: none;
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+	border-color:#034a84!important;
+		
+	
 }
 
+
+
+
+/* EXAMPLE 6 - Background Logo*/
+.example6 .navbar-brand{ 
+  background: url("../images/logo.png") center / contain no-repeat;
+  width: 200px;
+}
+
+
+/* CSS Transform Align Navbar Brand Text ... This could also be achieved with table / table-cells */
+.navbar-alignit .navbar-header {
+	  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 50px;
+}
+.navbar-alignit .navbar-brand {
+	top: 50%;
+	display: block;
+	position: relative;
+	height: auto;
+	transform: translate(0,-50%);
+	margin-right: 15px;
+  margin-left: 15px;
+}
+
+
+.navbar-inverse{
+	background-color:white!important;
+	border:none!important;
+}
+
+
+.navbar-nav>li>.dropdown-menu {
+	z-index: 9999;
+}
+.navbar-inverse .navbar-nav > li > a{
+	color:#034a84!important;
+}
+
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover{
+	background-color:#e2e7ec!important;
+	
+}
+
+.navbar-nav>li>.dropdown-menu {
+	z-index: 9999;
+}
 .footerlink li a{
 	color:#fff;
 	text-decoration:none;
@@ -68,7 +124,16 @@ a{
     display: block;
     text-align: left;
   }
+.iconspe{
+		width:46%!important;
+	}
+}
 
+@media screen and (max-width: 414px) {
+	.iconspe{
+		width:100%!important;
+	}
+	
 }
 
 .bgdefultcolor{ 
@@ -240,6 +305,8 @@ li{
 	
 	
 }
+
+
 
 
 
