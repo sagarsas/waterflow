@@ -1,0 +1,169 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap Vertical Tabs</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/product.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="navbar-fixed">
+        <nav class="header">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">Logo</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Home</a></li>
+                <li class="active"><a href="badges.html">Products</a></li>
+                <li><a href="collapsible.html">Orders</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+              </ul>
+            </div>
+      </nav>
+    </div>
+      <div class="container">
+        <div class="row" style="min-height:600px;">
+          <div  class="col-md-12">
+            <hr/>
+            <div class="col-xs-3"> <!-- required for floating -->
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs tabs-left">
+                <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-rss" aria-hidden="true"></i>SUBSCRIPTION</a></li>
+                <li><a href="#profile" data-toggle="tab"><i class="fa fa-list-alt" aria-hidden="true"></i>INVOICES</a></li>
+                <li><a href="#messages" data-toggle="tab"><i class="fa fa-share" aria-hidden="true"></i>REFERRAL</a></li>
+                <li><a href="#settings" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i>REQUESTS</a></li>
+                <li><a href="#settings" data-toggle="tab"><i class="fa fa-sign-out" aria-hidden="true"></i>LOGOUT</a></li>
+              </ul>
+            </div>
+
+            <div class="col-xs-9">
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="home">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5>Hello <span id="cust-name">Sajidur Rahman</span>,</h5>
+                            <br>
+                            <h6><b>Your current outstanding amount is ₹ <span id="outstandingAmt">0.00</span>/-</b></h6>
+                        </div>
+                        <div class="col-md-4">
+                            <h6><b>Delivery Address</b></h6>
+                            <br>
+                            <span id="address">
+                                House No. 381, 7th Cross, 8th Main Road, ST Bed Layout, Koramangala,  Bengaluru,
+                                Karnataka - 560034
+                            </span><br><br>
+                            <b>Phone: </b><span id="phoneNumber">8308835600</span>
+                        </div>
+                    </div>
+                    <table class="bordered highlight">
+                        <tr>
+                            <td><h6><b>Your Subscription details</b></h6></td>
+                            <td></td>
+                            <td style="text-align: right"><h6><b>Start: </b><span id="startDate">Jul 5,2017</span></h6></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 14px;">
+                                <span class="circle" id="subscriptionSerial">1</span>&nbsp;
+                                <span id="pdtName"><b>Star Plus+</b></span><br>
+                                <img width="200px" src="images/product1.png">
+                            </td>
+                            <td>
+                                <span>Monthly Rental</span><br>
+                                <span id="itemRent"><b>1105.33</b></span> /per month
+                            </td>
+                            <td style="text-align: right">
+                                <i style="font-size: 20px;  color: green;" class="activeCheck fa fa-check-circle" aria-hidden="true"></i>Active
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tab-pane" id="profile">
+                    <h5>Payment/Invoices</h5>
+                    <p style="border-top: 1px solid lightgray; border-bottom: 1px solid lightgray; padding: 15px;margin: 20px 0;">Your current outstanding balance is <b>₹ <span id="outstandingAmt">0.00</span>/-</b></p>
+                    <table style="font-size: 14px;" class="bordered highlight">
+                        <thead style="background-color: dodgerblue; color: white;">
+                            <td>Start-End Date</td>
+                            <td>Amount</td>
+                            <td>Link</td>
+                        </thead>
+                        <tr>
+                            <td>11 Jan 2018 - 11 Feb 2018</td>
+                            <td>1100.00</td>
+                            <td><a href="#">Link</a></td>
+                        </tr>
+                    </table>
+                  
+                </div>
+                <div class="tab-pane" id="messages" style="text-align: center; margin: auto;">
+                  <h3 style="font-family: 'Raleway', sans-serif; ">Discounts Pouring!</h3><br>
+                    <h5>Invite your friends to BlueSips and both you get rent off upto ₹ 200</h5><br><br>
+                    <h6>Your referral code: <b><span id="refCode">SAJI3123</span></b></h6><br><br>
+                        <a class="social-btn btn btn-block btn-social btn-facebook">
+                            <span class="fa fa-facebook" aria-hidden="true"></span>
+                            Share on Facebook
+                        </a>
+                        <a class="social-btn btn btn-block btn-social btn-google">
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            Invite Email Contacts
+                        </a>
+                        <a class="social-btn btn btn-block btn-social btn-twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            Share on Twitter
+                        </a>                    
+                </div>
+                <div class="tab-pane" id="settings">
+                  
+                <table class="bordered highlight">
+                        <tr>
+                            <td><h6><b>Your Subscription details</b></h6></td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right"><h6><b>Start: </b><span id="startDate">Jul 5,2017</span></h6></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 14px;">
+                                <span class="circle" id="subscriptionSerial">1</span>&nbsp;
+                                <span id="pdtName"><b>Star Plus+</b></span><br>
+                                <img width="200px" src="images/product1.png">
+                            </td>
+                            <td>
+                                <span>Monthly Rental</span><br>
+                                <span id="itemRent"><b>1105.33</b></span> /per month
+                            </td>
+                            <td style="text-align: right">
+                                <i style="font-size: 20px;  color: green;" class="activeCheck fa fa-check-circle" aria-hidden="true"></i>Active
+                            </td>
+                            <td style="text-align: right;">
+                                <a href="#">Deactivate</a>
+                            </td>
+                        </tr>
+                    </table>  
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+      </div>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>

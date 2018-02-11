@@ -22,10 +22,12 @@ body {margin:0;
   text-decoration: none;
 }
 
+/*
 .active {
   background-color: #75b5ce;
   color: white;
 }
+*/
 
 .topnav .icon {
   display: none;
