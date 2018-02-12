@@ -157,4 +157,26 @@
 }
 .header-menu li{
     height: 100%;
+<<<<<<< HEAD
+=======
+}
+#tech-spec-table td{
+    padding: 10px;
+}
+#installationTable td{
+    padding: 10px;
+}
+.bordered tr td:first-child{
+    font-weight: bold;
+}
+.product-row{
+    background: white;
+}
+.collapsible-body{
+    background: white;
+}
+.collapsible-header{
+    background-color: #095a9d;
+    color: white;
+>>>>>>> 8788525b9d260bd209dccc39d98913cc652fce2c
 }
