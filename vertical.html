@@ -1,43 +1,68 @@
 <html>
     <head>
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/materialize.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+        <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
     </head>
     
     <body>
-        
-        <style>
-            
+       <style>
+/*             For hamburger icon*/
+             body {
+                padding-top: 100px;
+              }
+              .nav-fixed {
+                position: fixed;
+                right: 0;
+                left: 0;
+                top: 0;
+                margin-bottom: 0px;
+                z-index: 997;
+              }
+           
         </style>
         
         
-        <ul class="collapsible popout" data-collapsible="accordion">
-            <li>
-              <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
-            <li>
-              <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-            </li>
+         <!-- Horizonal Navigation bar -->
+          <nav class="header nav-fixed">
+            <div class="nav-wrapper container">
+              <a class="button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="material-icons">menu</i>
+              <a id="logo-container" class="brand-logo">
+                Ardublockly
+              </a>
+              <!-- Horizontal Navbar links only shown on large resolutions -->
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" id="button_load">Open<i class="mdi-file-file-upload left"></i></a></li>
+                <li><a href="#" id="button_save">Save<i class="mdi-file-file-download left"></i></a></li>
+                <li><a href="#" id="button_delete">Delete All<i class="mdi-action-delete left"></i></a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- Sidebar navigation -->
+          <ul id="slide-out" class="side-nav">
+                <li id="menu_load"><a href="#">Open<i class="mdi-file-file-upload left"></i></a></li>
+                <li id="menu_save"><a href="#">Save<i class="mdi-file-file-download left"></i></a></li>
+            <li id="menu_delete"><a href="#">Delete All<i class="mdi-action-delete left"></i></a></li>
           </ul>
+    
+        
+        
         
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-          <!--Import jQuery before materialize.js-->
-      
+        <script src="js/materialize.js"></script>      
         <script type="text/javascript" src="js/product.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>
+               $( document ).ready(function() {
+                  $(".button-collapse").sideNav({
+                      edge:"right"
+                  });
+                });
+        </script>
     </body>
 
 </html>

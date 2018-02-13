@@ -157,8 +157,6 @@
 }
 .header-menu li{
     height: 100%;
-<<<<<<< HEAD
-=======
 }
 #tech-spec-table td{
     padding: 10px;
@@ -176,7 +174,18 @@
     background: white;
 }
 .collapsible-header{
-    background-color: #095a9d;
+    background-color: #095a9d !important;
     color: white;
->>>>>>> 8788525b9d260bd209dccc39d98913cc652fce2c
+}
+#logo-container{
+    background: url("../images/logo.png") center contain no-repeat;
+    width: 200px;
+}
+.brand-logo{
+    background: url("../images/logo.png") center contain no-repeat;
+    width: 200px;
+    
+}
+.page-header{
+    color: black;
 }

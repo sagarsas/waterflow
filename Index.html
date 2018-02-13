@@ -6,10 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bluesips</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="css/media.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/product.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
@@ -17,58 +17,52 @@
 </head>
 <body>
 
-<div class="container-fluid bgdefultcolor" style="background-color: #0c3d5e;">
-	<div class="container">
-	  <div class="row font-colorsp">
-		
-		<div class="col-lg-12 col-sm-12" style="line-height: 1.5; text-align:center;">
-			<i class="glyphicon glyphicon-phone"></i>
-			<h6 class="displinhrt" style="margin-right: 26px;"><b>080-987654321</b></h6>
-			<i class="glyphicon glyphicon-envelope"></i>
-			<h6 class="displinhrt"><b>Email: support@bluesips.com</b></h6>
-		</div>
-	  </div>
+<div class="navbar-fixed">
+		<nav class="header nav-fixed">
+            <div class="nav-wrapper container">
+                <a class="button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="material-icons">menu</i></a>
+              <a id="logo-container" class="brand-logo">
+                Ardublockly
+              </a>
+                  <!-- Horizontal Navbar links only shown on large resolutions -->
+
+
+				<ul class="right hide-on-med-and-down" id="nav-mobile">
+					<li>
+						<a href="#" id="button_load">Open<i class="mdi-file-file-upload left"></i></a>
+					</li>
+
+
+					<li>
+						<a href="#" id="button_save">Save<i class="mdi-file-file-download left"></i></a>
+					</li>
+
+
+					<li>
+						<a href="#" id="button_delete">Delete All<i class="mdi-action-delete left"></i></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 	</div>
-</div>
+	<!-- Sidebar navigation -->
 
-<div class="navbar-fixed" style="box-shadow:0px 2px 2px grey;">
-<nav class="navbar navbar-inverse navbar-static-top example6" style="margin-bottom:0; padding:0;">
-    <div class="container" style="display: block;">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" style="background-color: #034a84;" data-toggle="collapse" data-target="#navbar6">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand text-hide" href="#">Brand Text
-        </a>
-      </div>
-      <div id="navbar6" class="navbar-collapse collapse">
-        <ul class="header-menu nav navbar-nav navbar-right" style="display: block;">
 
-          <li class="active"><a href="#"><b>Home</b></a></li>
-          <li><a href="#"><b>Products</b></a></li>
-          <li><a href="#"><b>Contact Us</b></a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><b>Profile &nbsp<span class="glyphicon glyphicon-triangle-bottom"></span> </b><span class="caret" style="border-top:none;"></span></a>
-            <ul class="dropdown-menu" role="menu" style="position:absolute;">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <!--/.nav-collapse -->
-    </div>
-    <!--/.container-fluid -->
-  </nav>
-</div>
+	<ul class="side-nav" id="slide-out">
+		<li id="menu_load">
+			<a href="#">Open<i class="mdi-file-file-upload left"></i></a>
+		</li>
+
+
+		<li id="menu_save">
+			<a href="#">Save<i class="mdi-file-file-download left"></i></a>
+		</li>
+
+
+		<li id="menu_delete">
+			<a href="#">Delete All<i class="mdi-action-delete left"></i></a>
+		</li>
+	</ul>
 
     <!-- Navigation -->
    
@@ -581,25 +575,10 @@
 	</div>
 </div>
 
-
-
-
-
-
-
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/product.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>

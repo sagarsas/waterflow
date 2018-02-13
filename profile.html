@@ -2,81 +2,75 @@
 <head>
   <meta charset="utf-8">
   <title>Bootstrap Vertical Tabs</title>
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
-<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
     <link href="css/bootstrap-social.css" rel="stylesheet">
 </head>
 <body>
     
     <div class="navbar-fixed">
-<nav class="navbar navbar-inverse navbar-static-top example6" style="margin-bottom:0; padding:0;">
-    <div class="container" style="display: block;">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" style="background-color: #034a84;" data-toggle="collapse" data-target="#navbar6">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand text-hide" href="#">Brand Text
-        </a>
-      </div>
-      <div id="navbar6" class="navbar-collapse collapse">
-        <ul class="header-menu nav navbar-nav navbar-right" style="display: block;">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Profile<span class="caret" style="border-top:none;"></span></a>
-            <ul class="dropdown-menu" role="menu" style="position:absolute;">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li class="dropdown-header">Nav header</li>
-              <li><a href="#">Separated link</a></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <!--/.nav-collapse -->
-    </div>
-    <!--/.container-fluid -->
-  </nav>
+		<nav class="header nav-fixed">
+            <div class="nav-wrapper container">
+                <a class="button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="material-icons">menu</i></a>
+              <a id="logo-container" class="brand-logo">
+                Ardublockly
+              </a>
+                  <!-- Horizontal Navbar links only shown on large resolutions -->
 
-    </div>
-      <div class="container">
-        <div class="row" style="min-height:600px;">
-          <div  class="col-md-12">
-            <hr/>
-            <div class="col-xs-3"> <!-- required for floating -->
-              <!-- Nav tabs -->
-              <ul class="nav nav-tabs tabs-left">
-                <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-rss" aria-hidden="true"></i>SUBSCRIPTION</a></li>
-                <li><a href="#profile" data-toggle="tab"><i class="fa fa-list-alt" aria-hidden="true"></i>INVOICES</a></li>
-                <li><a href="#messages" data-toggle="tab"><i class="fa fa-share" aria-hidden="true"></i>REFERRAL</a></li>
-                <li><a href="#settings" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i>REQUESTS</a></li>
-                <li><a href="#settings" data-toggle="tab"><i class="fa fa-sign-out" aria-hidden="true"></i>LOGOUT</a></li>
-              </ul>
-            </div>
 
-            <div class="col-xs-9">
-              <!-- Tab panes -->
-              <div class="tab-content">
-                <div class="tab-pane active" id="home">
-                    <div class="row">
+				<ul class="right hide-on-med-and-down" id="nav-mobile">
+					<li>
+						<a href="#" id="button_load">Open<i class="mdi-file-file-upload left"></i></a>
+					</li>
+
+
+					<li>
+						<a href="#" id="button_save">Save<i class="mdi-file-file-download left"></i></a>
+					</li>
+
+
+					<li>
+						<a href="#" id="button_delete">Delete All<i class="mdi-action-delete left"></i></a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- Sidebar navigation -->
+
+
+	<ul class="side-nav" id="slide-out">
+		<li id="menu_load">
+			<a href="#">Open<i class="mdi-file-file-upload left"></i></a>
+		</li>
+
+
+		<li id="menu_save">
+			<a href="#">Save<i class="mdi-file-file-download left"></i></a>
+		</li>
+
+
+		<li id="menu_delete">
+			<a href="#">Delete All<i class="mdi-action-delete left"></i></a>
+		</li>
+	</ul>
+
+
+    <div class="container">
+        <ul class="collapsible popout" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header active"><i class="material-icons">filter_drama</i>SUBSCRIPTION</div>
+              <div class="collapsible-body">
+                  <div class="row">
                         <div class="col-md-8">
                             <h5>Hello <span id="cust-name">Sajidur Rahman</span>,</h5>
                             <br>
@@ -114,8 +108,11 @@
                         </tr>
                     </table>
                 </div>
-                <div class="tab-pane" id="profile">
-                    <h5>Payment/Invoices</h5>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">place</i>INVOICES</div>
+              <div class="collapsible-body">
+                  <h5>Payment/Invoices</h5>
                     <p style="border-top: 1px solid lightgray; border-bottom: 1px solid lightgray; padding: 15px;margin: 20px 0;">Your current outstanding balance is <b>₹ <span id="outstandingAmt">0.00</span>/-</b></p>
                     <table style="font-size: 14px;" class="bordered highlight">
                         <thead style="background-color: dodgerblue; color: white;">
@@ -130,8 +127,12 @@
                         </tr>
                     </table>
                   
-                </div>
-                <div class="tab-pane" id="messages" style="text-align: center; margin: auto;">
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>REFERRAL</div>
+              <div class="collapsible-body">
+                
                   <h3 style="font-family: 'Raleway', sans-serif; ">Discounts Pouring!</h3><br>
                     <h5>Invite your friends to BlueSips and both you get rent off upto ₹ 200</h5><br><br>
                     <h6>Your referral code: <b><span id="refCode">SAJI3123</span></b></h6><br><br>
@@ -146,10 +147,14 @@
                         <a class="social-btn btn btn-block btn-social btn-twitter">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                             Share on Twitter
-                        </a>                    
+                        </a>  
+                
                 </div>
-                <div class="tab-pane" id="settings">
-                  
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>REQUESTS</div>
+              <div class="collapsible-body">
+                
                 <table class="bordered highlight">
                         <tr>
                             <td><h6><b>Your Subscription details</b></h6></td>
@@ -174,21 +179,20 @@
                                 <a href="#">Deactivate</a>
                             </td>
                         </tr>
-                    </table>  
-                  
+                    </table>
+                
                 </div>
-              </div>
-            </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">whatshot</i>LOGOUT</div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
+        
+    </div>
+    
+    
 
-            <div class="clearfix"></div>
-
-          </div>
-        </div>
-
-        <div class="clearfix"></div>
-
-      </div>
-	  
 <!-- footer start -->
 
 <div class="container-fluid howitwork fixed-bg">
@@ -275,7 +279,8 @@
 	  
 	  
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="js/product.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
