@@ -177,15 +177,7 @@
     background-color: #095a9d !important;
     color: white;
 }
-#logo-container{
-    background: url("../images/logo.png") center contain no-repeat;
-    width: 200px;
-}
-.brand-logo{
-    background: url("../images/logo.png") center contain no-repeat;
-    width: 200px;
-    
-}
+
 .page-header{
     color: black;
 }
