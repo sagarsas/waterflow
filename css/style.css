@@ -3,6 +3,13 @@ body {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
+.boxshadowsp{
+   
+}
+
+.boxshadowsp:hover{
+   box-shadow: 0 2px 4px 0 rgba(35, 36, 37, 0.3);
+}
 /**********************************
 Responsive navbar-brand image CSS
 - Remove navbar-brand padding for firefox bug workaround
