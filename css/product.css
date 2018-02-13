@@ -181,3 +181,13 @@
 .page-header{
     color: black;
 }
+
+.menu-list li a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.menu-list li {
+    text-align: center;
+}
