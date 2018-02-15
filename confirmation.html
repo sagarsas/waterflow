@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confirm Order | Bluesips</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/product.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="css/auth.css" />
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+<script src="https://cdn.firebase.com/libs/firebaseui/2.6.0/firebaseui.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB2RLdAhbGECYGAyhzDyneCMOsY-nhBa7Q",
+    authDomain: "waterflow-2ff7e.firebaseapp.com",
+    databaseURL: "https://waterflow-2ff7e.firebaseio.com",
+    projectId: "waterflow-2ff7e",
+    storageBucket: "waterflow-2ff7e.appspot.com",
+    messagingSenderId: "868019908976"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
+  <body>
+      
+    <div id="bg" style="background-image: url(images/gplaypattern2.png)">
+
+        <div id="gradient"></div>
+        
+        <div class="navbar-fixed">
+		<nav class="header nav-fixed white">
+            <div class="nav-wrapper container">
+                <a class="button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="material-icons" style="color: slategray">menu</i></a>
+              <a id="logo-container" class="brand-logo">
+                <img src="images/logo.png">
+              </a>
+                  <!-- Horizontal Navbar links only shown on large resolutions -->
+
+
+				<ul class="right hide-on-med-and-down menu-list" id="nav-mobile">
+					<li>
+						<a href="/catalogue.html" id="button_products">PRODUCTS</a>
+					</li>
+
+
+					<li>
+						<a href="#" id="button_howitwors">HOW IT WORKS</a>
+					</li>
+
+
+					<li>
+						<a href="#" id="button_faq">FAQ</a>
+					</li>
+                    
+                    <li>
+						<a href="#" id="button_offers"><i class="fa fa-gift" aria-hidden="true"></i></a>
+					</li>
+                    
+                    <li>
+						<a href="#" id="button_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+					</li>
+                    
+                    <li id="signinbtn">
+						<a href="#" id="button_signin">SIGN IN</a>
+					</li>
+                    
+                    <li class="profilebtn">
+                        <a class="dropdown-button" href="#!" data-activates="dropdown1"><img id="profilepic" class="image--cover" src="images/gplaypattern.png">PROFILE</a>
+                    </li>
+				</ul>
+			</div>
+		</nav>
+    
+                    <ul id="dropdown1" class="dropdown-content profilebtn">
+                        <li><a href="/profile.html#subscription">Subscription</a></li>
+                        <li><a href="/profile.html#invoices">Invoices</a></li>
+                        <li><a href="/profile.html#referral">Referral</a></li>
+                        <li><a href="/profile.html#requests">Requests</a></li>
+                        <li class="divider"></li>
+                        <li><a id="signoutbtn" href="#">Logout</a></li>
+                    </ul>
+	</div>
+        
+    <div class="container" style="margin-top: 50px; background-color: white; -webkit-box-shadow: -1px 2px 17px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 2px 17px -2px rgba(0,0,0,0.75);
+box-shadow: -1px 2px 17px -2px rgba(0,0,0,0.75);">
+        
+            <table class="bordered" id="confirm-table">
+                        <tr>
+                            <td><h6><b>Confirm Pre-Order</b></h6></td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right"><h6><b>Start: </b><span id="startDate">Jul 5,2017</span></h6></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size: 14px;">
+                                <span class="circle" id="subscriptionSerial">1</span>&nbsp;
+                                <span id="pdtName"><b>Star Plus+</b></span><br>
+                                <img width="200px" src="images/product1.png">
+                            </td>
+                            <td>
+                                <span>Monthly Rental</span><br>
+                                <span id="itemRent"><b>1105.33</b></span> /per month
+                            </td>
+                            <td style="text-align: right">
+                                <i style="font-size: 20px;  color: green;" class="activeCheck fa fa-check-circle" aria-hidden="true"></i>Active
+                            </td>
+                            <td style="text-align: right;">
+                                <a href="#" id="confirmPreOrderBtn">Confirm Pre-Order</a>
+                            </td>
+                        </tr>
+                    </table>
+        </div>
+        
+        <br><br>
+        
+        <div class="container" id="orderSuccess" hidden style="text-align: center;">
+        
+            <i style="font-size: 20px;  color: green;" class="activeCheck fa fa-check-circle" aria-hidden="true"></i>
+            <span id="successMsg">Thank You. Your pre-order has been placed. You can check your order by clicking Profile and selecting "Subscriptions"</span>
+        </div>
+        
+    </div>
+
+      
+      
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/product.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/checklogin.js"></script>
+      <script src="js/preorder.js"></script>
+    <script>
+        $('#signinbtn').click(function(){
+                localStorage.setItem('bs-login-redirect','index.html')
+                window.location.href = "/auth.html";
+            })
+        $('#signoutbtn').click(function(){
+            firebase.auth().signOut().then(function() {
+                window.location.href = "/index.html";
+            }, function(error) {
+              console.log("Error signing out. Please try again later.")
+            });
+        })
+    </script>
+  </body>
+</html>
