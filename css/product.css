@@ -186,7 +186,7 @@
 
 .menu-list li a{
     text-decoration: none;
-    color: #095a9d;
+    color: #095a9d!important;
     font-weight: 700;
     text-align: center;
 }
