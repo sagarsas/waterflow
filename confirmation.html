@@ -47,6 +47,11 @@
 
 
 				<ul class="right hide-on-med-and-down menu-list" id="nav-mobile">
+                    
+                    <li>
+						<a href="/index.html" id="button_products">HOME</a>
+					</li>
+                    
 					<li>
 						<a href="/catalogue.html" id="button_products">PRODUCTS</a>
 					</li>
@@ -105,7 +110,7 @@ box-shadow: -1px 2px 17px -2px rgba(0,0,0,0.75);">
                             <td style="font-size: 14px;">
                                 <span class="circle" id="subscriptionSerial">1</span>&nbsp;
                                 <span id="pdtName"><b>Star Plus+</b></span><br>
-                                <img width="200px" src="images/product1.png">
+                                <img id="pdt-pic" width="200px" src="images/product1.png">
                             </td>
                             <td>
                                 <span>Monthly Rental</span><br>
@@ -151,6 +156,11 @@ box-shadow: -1px 2px 17px -2px rgba(0,0,0,0.75);">
             }, function(error) {
               console.log("Error signing out. Please try again later.")
             });
+        })
+        
+        $(document).ready(function(){
+            
+            $('#pdt-pic').attr('src',"images/"+localStorage.getItem("bsPreOrderPdtId")+".png");
         })
     </script>
   </body>

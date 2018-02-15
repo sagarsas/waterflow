@@ -1,0 +1,25 @@
+.top-tagline{
+    font-size: 50px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+}
+
+#strikethrough{
+    text-decoration: line-through;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+}
+
+.followUpTagline{
+    font-size: 25px;
+    font-weight: 200;
+    font-family: "Raleway", sans-serif;
+}
+
+.shiftTextRight{
+    float: right;
+}
+
+
