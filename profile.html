@@ -58,10 +58,10 @@
 		</nav>
     
                     <ul id="dropdown1" class="dropdown-content">
-                        <li><a href="#!">Subscription</a></li>
-                        <li><a href="#!">Invoices</a></li>
-                        <li><a href="#!">Referral</a></li>
-                        <li><a href="#!">Requests</a></li>
+                        <li><a href="/profile.html#subscription">Subscription</a></li>
+                        <li><a href="/profile.html#invoices">Invoices</a></li>
+                        <li><a href="/profile.html#referral">Referral</a></li>
+                        <li><a href="/profile.html#requests">Requests</a></li>
                         <li class="divider"></li>
                         <li><a href="#">Logout</a></li>
                     </ul>
@@ -103,16 +103,16 @@
         <li class="divider"></li>
         
         <li>
-            <a href="#!">SUBSCRIPTION</a>
+            <a href="/profile.html#subscription">SUBSCRIPTION</a>
         </li>
         <li>
-            <a href="#!">INVOICES</a>
+            <a href="/profile.html#invoices">INVOICES</a>
         </li>
         <li>
-            <a href="#!">REFERRAL</a>
+            <a href="/profile.html#referral">REFERRAL</a>
         </li>
         <li>
-            <a href="#!">REQUESTS</a>
+            <a href="/profile.html#requests">REQUESTS</a>
         </li>
         
         <li class="divider"></li>
@@ -125,7 +125,7 @@
 
     <div class="container">
         <ul class="collapsible popout" data-collapsible="accordion">
-            <li>
+            <li id="subscription">
               <div class="collapsible-header active"><i class="material-icons">filter_drama</i>SUBSCRIPTION</div>
               <div class="collapsible-body">
                   <div class="row">
@@ -167,7 +167,7 @@
                     </table>
                 </div>
             </li>
-            <li>
+            <li id="invoices">
               <div class="collapsible-header"><i class="material-icons">place</i>INVOICES</div>
               <div class="collapsible-body">
                   <h5>Payment/Invoices</h5>
@@ -187,7 +187,7 @@
                   
               </div>
             </li>
-            <li>
+            <li id="referral">
               <div class="collapsible-header"><i class="material-icons">whatshot</i>REFERRAL</div>
               <div class="collapsible-body">
                 
@@ -209,7 +209,7 @@
                 
                 </div>
             </li>
-            <li>
+            <li id="requests">
               <div class="collapsible-header"><i class="material-icons">whatshot</i>REQUESTS</div>
               <div class="collapsible-body">
                 
@@ -241,7 +241,7 @@
                 
                 </div>
             </li>
-            <li>
+            <li id="logout">
               <div class="collapsible-header"><i class="material-icons">whatshot</i>LOGOUT</div>
               <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
             </li>
@@ -341,5 +341,16 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        var url = document.location.toString();
+        console.log('#'+url.split('#')[1])
+        if ( url.match('#') ) {
+            var cPanelBody = $('#'+url.split('#')[1]);
+            console.log(cPanelBody.find(".collapsible-header"));
+            $(".collapsible-header").removeClass("active");
+            cPanelBody.find(".collapsible-header").addClass("active");
+        }
+    
+    </script>
 </body>
 </html>

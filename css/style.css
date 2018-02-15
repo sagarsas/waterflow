@@ -5,7 +5,7 @@ body {
 }
 
 .boxshadowsp{
-   
+   background-color: white;
 }
 
 .boxshadowsp:hover{
@@ -385,7 +385,7 @@ img {
 }
 
 .secthowitwork{
-	background-color:#ECF0F1;
+	background-color:#F3F5F9;
 	padding:100px;
 }
 
@@ -411,8 +411,14 @@ li{
 }
 
 .titistyle{
-	border-width:3px;  padding:10px;  border-style:dotted solid; border-color:#095a9d;
-	
+
+    font-family: "Raleway", sans-serif;
+    padding: 6px;
+    -webkit-box-shadow: 0px 17px 0px -15px rgba(191,195,199,1);
+-moz-box-shadow: 0px 17px 0px -15px rgba(191,195,199,1);
+box-shadow: 0px 17px 0px -15px rgba(191,195,199,1);
+
+
 }
 
 .footersp li {
