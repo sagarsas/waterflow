@@ -8,76 +8,33 @@
         rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
         <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/2.6.0/firebaseui.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyB2RLdAhbGECYGAyhzDyneCMOsY-nhBa7Q",
+            authDomain: "waterflow-2ff7e.firebaseapp.com",
+            databaseURL: "https://waterflow-2ff7e.firebaseio.com",
+            projectId: "waterflow-2ff7e",
+            storageBucket: "waterflow-2ff7e.appspot.com",
+            messagingSenderId: "868019908976"
+          };
+          firebase.initializeApp(config);
+        </script>
     </head>
     
     <body>
        <style>
 /*             For hamburger icon*/
-             body {
-                padding-top: 100px;
-              }
-              .nav-fixed {
-                position: fixed;
-                right: 0;
-                left: 0;
-                top: 0;
-                margin-bottom: 0px;
-                z-index: 997;
-              }
-           
+          
         </style>
         
-        
-         <!-- Horizonal Navigation bar -->
-          <nav class="header nav-fixed white">
-            <div class="nav-wrapper container">
-                <a class="button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="material-icons" style="color: slategray">menu</i></a>
-              <a id="logo-container" class="brand-logo">
-                <img src="images/logo.png">
-              </a>
-              <!-- Horizontal Navbar links only shown on large resolutions -->
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#" id="button_load">Open<i class="mdi-file-file-upload left"></i></a></li>
-                <li><a href="#" id="button_save">Save<i class="mdi-file-file-download left"></i></a></li>
-                <li><a href="#" id="button_delete">Delete All<i class="mdi-action-delete left"></i></a></li>
-              </ul>
-            </div>
-          </nav>
-
-          <!-- Sidebar navigation -->
-<!--
-          <ul id="slide-out" class="side-nav">
-                <li id="menu_load"><a href="#">Open<i class="mdi-file-file-upload left"></i></a></li>
-                <li id="menu_save"><a href="#">Save<i class="mdi-file-file-download left"></i></a></li>
-            <li id="menu_delete"><a href="#">Delete All<i class="mdi-action-delete left"></i></a></li>
-          </ul>
--->
-    
-        
-        
-        <nav id="slide-out" class="side-nav">
-          <header id="sidebar-header"><a id="codepen-link" href="https://www.codepen.io/seanfree" target="_blank"></a>
-            <div id="profile-info">
-              <h3 id="profile-name">Sean Free</h3>
-              <h4 id="blurb">Rogue Webonaut</h4>
-            </div><a id="btn-more"><span class="dot"></span><span class="dot"></span><span class="dot"></span></a>
-            <ul id="sidebar-nav-list">
-              <li class="sidebar-nav-item" id="nav-item-Home"><a href="#">Home</a></li>
-              <li class="sidebar-nav-item" id="nav-item-Social"><a href="#">Social</a></li>
-              <li class="sidebar-nav-item" id="nav-item-Mail"><a href="#">Mail</a></li>
-              <li class="sidebar-nav-item" id="nav-item-Pictures"><a href="#">Pictures</a></li>
-              <li class="sidebar-nav-item" id="nav-item-Music"><a href="#">Music</a></li>
-              <li class="sidebar-nav-item" id="nav-item-Files"><a href="#">Files</a></li>
-              <li class="sidebar-nav-item" id="nav-item-Settings"><a href="#">Settings</a></li>
-              <li class="sidebar-nav-item" id="nav-item-Close"><a href="#">Close</a></li>
-            </ul>
-          </header>
-        </nav>
-        
-        
-        
-        
-        
+        <div id="btn" type="button">Login</div>
+        <div>
+        <p> Name is: <span id="name"></span><p>
+        </div>
         
         
         
@@ -91,7 +48,12 @@
                       edge:"right"
                   });
                 });
+            $('#btn').click(function(){
+                localStorage.setItem('bs-login-redirect','vertical.html')
+                window.location.href = "/auth.html";
+            })
         </script>
+        <script src="js/checklogin.js"></script>
     </body>
 
 </html>

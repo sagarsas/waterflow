@@ -15,11 +15,27 @@
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/product.css">
         <link href="css/bootstrap-social.css" rel="stylesheet">
+        <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/2.6.0/firebaseui.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+        <script>
+              // Initialize Firebase
+              var config = {
+                apiKey: "AIzaSyB2RLdAhbGECYGAyhzDyneCMOsY-nhBa7Q",
+                authDomain: "waterflow-2ff7e.firebaseapp.com",
+                databaseURL: "https://waterflow-2ff7e.firebaseio.com",
+                projectId: "waterflow-2ff7e",
+                storageBucket: "waterflow-2ff7e.appspot.com",
+                messagingSenderId: "868019908976"
+              };
+              firebase.initializeApp(config);
+        </script>
+
 </head>
 
 <body>
 	
-    <div class="navbar-fixed">
+   <div class="navbar-fixed">
 		<nav class="header nav-fixed white">
             <div class="nav-wrapper container">
                 <a class="button-collapse" href="#" data-activates="slide-out" id="button-collapse"><i class="material-icons" style="color: slategray">menu</i></a>
@@ -31,41 +47,45 @@
 
 				<ul class="right hide-on-med-and-down menu-list" id="nav-mobile">
 					<li>
-						<a href="/catalogue.html" id="button_load">PRODUCTS</a>
+						<a href="/catalogue.html" id="button_products">PRODUCTS</a>
 					</li>
 
 
 					<li>
-						<a href="#" id="button_save">HOW IT WORKS</a>
+						<a href="#" id="button_howitwors">HOW IT WORKS</a>
 					</li>
 
 
 					<li>
-						<a href="#" id="button_delete">FAQ</a>
+						<a href="#" id="button_faq">FAQ</a>
 					</li>
                     
                     <li>
-						<a href="#" id="button_delete"><i class="fa fa-gift" aria-hidden="true"></i></a>
+						<a href="#" id="button_offers"><i class="fa fa-gift" aria-hidden="true"></i></a>
 					</li>
                     
                     <li>
-						<a href="#" id="button_delete"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+						<a href="#" id="button_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 					</li>
                     
-                    <li>
-                        <a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="fa fa-user" aria-hidden="true"></i>PROFILE</a>
+                    <li id="signinbtn">
+						<a href="#" id="button_signin">SIGN IN</a>
+					</li>
+                    
+                    <li class="profilebtn">
+                        <a class="dropdown-button" href="#!" data-activates="dropdown1"><img id="profilepic" class="image--cover" src="images/gplaypattern.png">PROFILE</a>
                     </li>
 				</ul>
 			</div>
 		</nav>
     
-                    <ul id="dropdown1" class="dropdown-content">
+                    <ul id="dropdown1" class="dropdown-content profilebtn">
                         <li><a href="/profile.html#subscription">Subscription</a></li>
                         <li><a href="/profile.html#invoices">Invoices</a></li>
                         <li><a href="/profile.html#referral">Referral</a></li>
                         <li><a href="/profile.html#requests">Requests</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a id="signoutbtn" href="#">Logout</a></li>
                     </ul>
 	</div>
 	<!-- Sidebar navigation -->
@@ -655,5 +675,19 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/checklogin.js"></script>
+    <script>
+        $('#signinbtn').click(function(){
+                localStorage.setItem('bs-login-redirect','product.html')
+                window.location.href = "/auth.html";
+            })
+        $('#signoutbtn').click(function(){
+            firebase.auth().signOut().then(function() {
+                window.location.href = "/index.html";
+            }, function(error) {
+              console.log("Error signing out. Please try again later.")
+            });
+        })
+    </script>
 </body>
 </html>
