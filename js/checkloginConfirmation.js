@@ -33,7 +33,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     // ...
   } else {
     $('.profilebtn').remove();
-      localStorage.setItem('bs-login-redirect','profile.html')
+      localStorage.setItem('bs-login-redirect','confirmation.html')
       window.location.href = "/auth.html"
   }
 });

@@ -1,5 +1,5 @@
 *{
-    font-family: sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 .header{
     background-color: #095a9d;
@@ -203,4 +203,16 @@
 
   object-fit: cover;
   object-position: center right;
+}
+
+.card-btn{
+    margin: 10px;
+    font-size: 15px !important;
+    max-width: 150px;
+    padding: 0px 10px 0 0 !important;
+    text-transform: none !important;
+}
+.card-offer{
+    color: green;
+    font-weight: bold;
 }

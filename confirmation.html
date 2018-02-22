@@ -47,7 +47,6 @@
 
 
 				<ul class="right hide-on-med-and-down menu-list" id="nav-mobile">
-                    
                     <li>
 						<a href="/index.html" id="button_products">HOME</a>
 					</li>
@@ -74,7 +73,7 @@
 						<a href="#" id="button_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 					</li>
                     
-                    <li id="signinbtn">
+                    <li class="signinbtn">
 						<a href="#" id="button_signin">SIGN IN</a>
 					</li>
                     
@@ -91,9 +90,68 @@
                         <li><a href="/profile.html#referral">Referral</a></li>
                         <li><a href="/profile.html#requests">Requests</a></li>
                         <li class="divider"></li>
-                        <li><a id="signoutbtn" href="#">Logout</a></li>
+                        <li><a class="signoutbtn" href="#">Logout</a></li>
                     </ul>
 	</div>
+	<!-- Sidebar navigation -->
+
+
+	<ul class="side-nav" id="slide-out">
+        <img src="images/water.jpg" height="100px">
+        
+		<li>
+            <a  href="catalogue.html" id="button_load">PRODUCTS</a>
+        </li>
+
+
+        <li>
+            <a href="#" id="button_save">HOW IT WORKS</a>
+        </li>
+
+
+        <li>
+            <a href="#" id="button_delete">FAQ</a>
+        </li>
+
+        <li class="divider"></li>
+        
+        <li>
+            <a href="#" id="button_delete"><i class="fa fa-gift" aria-hidden="true"></i>OFFERS</a>
+        </li>
+
+        <li>
+            <a href="#" id="button_delete"><i class="fa fa-shopping-cart" aria-hidden="true"></i>CART</a>
+        </li>
+
+        <li>
+            <a href="profile.html"><i class="fa fa-user" aria-hidden="true"></i>PROFILE</a>
+        </li>
+
+        <li class="profile-related-tabs divider"></li>
+        
+        <li class="profile-related-tabs">
+            <a href="/profile.html#subscription">SUBSCRIPTION</a>
+        </li>
+        <li class="profile-related-tabs">
+            <a href="/profile.html#invoices">INVOICES</a>
+        </li>
+        <li class="profile-related-tabs">
+            <a href="/profile.html#referral">REFERRAL</a>
+        </li>
+        <li class="profile-related-tabs">
+            <a href="/profile.html#requests">REQUESTS</a>
+        </li>
+        
+        <li class="divider"></li>
+        
+        <li class="signinbtn">
+            <a href="#" id="button_signin">SIGN IN</a>
+        </li>
+        
+        <li class="signoutbtn">
+            <a href="#!"><i class="fa fa-sign-out" aria-hidden="true"></i>LOGOUT</a>
+        </li>
+	</ul>
         
     <div class="container" style="margin-top: 50px; background-color: white; -webkit-box-shadow: -1px 2px 17px -2px rgba(0,0,0,0.75);
 -moz-box-shadow: -1px 2px 17px -2px rgba(0,0,0,0.75);
@@ -104,22 +162,22 @@ box-shadow: -1px 2px 17px -2px rgba(0,0,0,0.75);">
                             <td><h6><b>Confirm Pre-Order</b></h6></td>
                             <td></td>
                             <td></td>
-                            <td style="text-align: right"><h6><b>Start: </b><span id="startDate">Jul 5,2017</span></h6></td>
                         </tr>
                         <tr>
                             <td style="font-size: 14px;">
                                 <span class="circle" id="subscriptionSerial">1</span>&nbsp;
-                                <span id="pdtName"><b>Star Plus+</b></span><br>
-                                <img id="pdt-pic" width="200px" src="images/product1.png">
+                                <span id="pdtName"></span><br>
+                                <img id="pdt-pic" width="200px" src="">
                             </td>
                             <td>
-                                <span>Monthly Rental</span><br>
-                                <span id="itemRent"><b>1105.33</b></span> /per month
+                                <span>Monthly Rent</span><br>
+                                <span style="color: #43a047" id="itemRent"><b>00.00</b></span><br><br>
+                                Address: <br><textarea id="address" class="form-control" rows="3" id="comment"></textarea>
+                                
+                                Phone Number: <input id="phoneNumber" type="text" style="max-width: 150px; padding: 1px; " name="FirstName" value="">
                             </td>
-                            <td style="text-align: right">
-                                <i style="font-size: 20px;  color: green;" class="activeCheck fa fa-check-circle" aria-hidden="true"></i>Active
-                            </td>
-                            <td style="text-align: right;">
+                            <td style="text-align: right; text-align: center">
+                                <i id="confirm-spinner" class="fa fa-spinner fa-spin" style="font-size:24px; display: none;"></i>
                                 <a href="#" id="confirmPreOrderBtn">Confirm Pre-Order</a>
                             </td>
                         </tr>
@@ -143,14 +201,13 @@ box-shadow: -1px 2px 17px -2px rgba(0,0,0,0.75);">
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="js/checklogin.js"></script>
-      <script src="js/preorder.js"></script>
+    <script src="js/checkloginConfirmation.js"></script>
     <script>
-        $('#signinbtn').click(function(){
+        $('.signinbtn').click(function(){
                 localStorage.setItem('bs-login-redirect','index.html')
                 window.location.href = "/auth.html";
             })
-        $('#signoutbtn').click(function(){
+        $('.signoutbtn').click(function(){
             firebase.auth().signOut().then(function() {
                 window.location.href = "/index.html";
             }, function(error) {
@@ -159,9 +216,73 @@ box-shadow: -1px 2px 17px -2px rgba(0,0,0,0.75);">
         })
         
         $(document).ready(function(){
+            var productId = localStorage.getItem("bsPreOrderPdtId");
+            $('#pdt-pic').attr('src',"images/"+productId+".png");
             
-            $('#pdt-pic').attr('src',"images/"+localStorage.getItem("bsPreOrderPdtId")+".png");
+            var settings = {
+              "async": true,
+              "crossDomain": true,
+              "url": "https://us-central1-waterflow-2ff7e.cloudfunctions.net/getProductDetails",
+              "method": "POST",
+              "headers": {
+                "content-type": "application/json"
+              },
+              "processData": false,
+              "data": JSON.stringify({"productId":productId})
+            }
+
+            $.ajax(settings).done(function (response) {
+                $('#pdtName').html("<b>" + response.productName + "</b>");
+                $('#itemRent').html("<b>₹ "+ response.productRent + "</b>/month");
+            });
+            
+            
+            
         })
+        
+        $('#confirmPreOrderBtn').click(function(){
+            if(!$('#address').val()){
+                alert("Please enter address.");
+            }
+            else if(!$('#phoneNumber').val()){
+                alert("Please enter phone Number");
+            }
+            
+            else{
+                $('#confirm-spinner').css("display","inline-block");
+                var user = JSON.parse(window.localStorage.getItem('bsuserData'));
+                var settings = {
+                  "async": true,
+                  "crossDomain": true,
+                  "url": "https://us-central1-waterflow-2ff7e.cloudfunctions.net/placePreorder",
+                  "method": "POST",
+                  "headers": {
+                    "content-type": "application/json",
+                    "cache-control": "no-cache",
+                    "postman-token": "6b028524-4926-f59e-197b-a73128fb0b66"
+                  },
+                  "processData": false,
+                  "data": JSON.stringify(
+                  {
+                      "displayName": user.displayName,
+                      "email": user.email,
+                      "address": $('#address').val(),
+                      "phoneNumber": $('#phoneNumber').val(),
+                      "productId": localStorage.getItem("bsPreOrderPdtId"),
+                      "timeStamp":new Date()
+                  })
+                }
+
+                $.ajax(settings).done(function (response) {
+                    $("#confirm-table").hide();
+                    $("#orderSuccess").show();
+                });
+            }
+            
+            
+        })
+        
+        
     </script>
   </body>
 </html>

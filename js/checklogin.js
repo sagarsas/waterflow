@@ -1,3 +1,4 @@
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -9,13 +10,34 @@ firebase.auth().onAuthStateChanged(function(user) {
     var uid = user.uid;
     var providerData = user.providerData;
       
+    
+    $('.signinbtn').remove();
       
-    $('#signinbtn').remove();  
-    localStorage.setItem('bsuserData',providerData);
+    localStorage.setItem('bsuserData',JSON.stringify(providerData[0]));
     $('#profilepic').attr('src',photoURL);
-    // ...
+    
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://us-central1-waterflow-2ff7e.cloudfunctions.net/signInUser",
+      "method": "POST",
+      "headers": {
+        "content-type": "application/json",
+      },
+      "processData": false,
+      "data": JSON.stringify({"displayName":displayName, "email":email, "photoURL":photoURL, "uid":uid})
+    }
+
+    $.ajax(settings).done(function (response) {
+        localStorage.setItem('bsrefCode',response);
+        console.log(response);
+    });  
+      
+      
   } else {
 //    $('#signinbtn').add();
+    $('.signoutbtn').hide();
     $('.profilebtn').remove();
+    $('.profile-related-tabs').remove();
   }
 });

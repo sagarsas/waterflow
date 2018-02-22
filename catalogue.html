@@ -14,20 +14,21 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:100,200" rel="stylesheet">
 <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
-        <script src="https://cdn.firebase.com/libs/firebaseui/2.6.0/firebaseui.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-        <script>
-              // Initialize Firebase
-              var config = {
-                apiKey: "AIzaSyB2RLdAhbGECYGAyhzDyneCMOsY-nhBa7Q",
-                authDomain: "waterflow-2ff7e.firebaseapp.com",
-                databaseURL: "https://waterflow-2ff7e.firebaseio.com",
-                projectId: "waterflow-2ff7e",
-                storageBucket: "waterflow-2ff7e.appspot.com",
-                messagingSenderId: "868019908976"
-              };
-              firebase.initializeApp(config);
-        </script>
+<link rel="stylesheet" type="text/css" href="css/carousal.css">
+<script src="https://cdn.firebase.com/libs/firebaseui/2.6.0/firebaseui.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB2RLdAhbGECYGAyhzDyneCMOsY-nhBa7Q",
+        authDomain: "waterflow-2ff7e.firebaseapp.com",
+        databaseURL: "https://waterflow-2ff7e.firebaseio.com",
+        projectId: "waterflow-2ff7e",
+        storageBucket: "waterflow-2ff7e.appspot.com",
+        messagingSenderId: "868019908976"
+      };
+      firebase.initializeApp(config);
+</script>
 
 </head>
 <body>
@@ -69,7 +70,7 @@
 						<a href="#" id="button_cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 					</li>
                     
-                    <li id="signinbtn">
+                    <li class="signinbtn">
 						<a href="#" id="button_signin">SIGN IN</a>
 					</li>
                     
@@ -86,7 +87,7 @@
                         <li><a href="/profile.html#referral">Referral</a></li>
                         <li><a href="/profile.html#requests">Requests</a></li>
                         <li class="divider"></li>
-                        <li><a id="signoutbtn" href="#">Logout</a></li>
+                        <li><a class="signoutbtn" href="#">Logout</a></li>
                     </ul>
 	</div>
 	<!-- Sidebar navigation -->
@@ -96,7 +97,7 @@
         <img src="images/water.jpg" height="100px">
         
 		<li>
-            <a href="#" id="button_load">PRODUCTS</a>
+            <a href="catalogue.html" id="button_load">PRODUCTS</a>
         </li>
 
 
@@ -120,32 +121,34 @@
         </li>
 
         <li>
-            <a href="#!"><i class="fa fa-user" aria-hidden="true"></i>PROFILE</a>
+            <a href="profile.html"><i class="fa fa-user" aria-hidden="true"></i>PROFILE</a>
         </li>
 
-        <li class="divider"></li>
+        <li class="profile-related-tabs divider"></li>
         
-        <li>
+        <li class="profile-related-tabs">
             <a href="/profile.html#subscription">SUBSCRIPTION</a>
         </li>
-        <li>
+        <li class="profile-related-tabs">
             <a href="/profile.html#invoices">INVOICES</a>
         </li>
-        <li>
+        <li class="profile-related-tabs">
             <a href="/profile.html#referral">REFERRAL</a>
         </li>
-        <li>
+        <li class="profile-related-tabs">
             <a href="/profile.html#requests">REQUESTS</a>
         </li>
         
         <li class="divider"></li>
         
-        <li>
+        <li class="signinbtn">
+            <a href="#" id="button_signin">SIGN IN</a>
+        </li>
+        
+        <li class="signoutbtn">
             <a href="#!"><i class="fa fa-sign-out" aria-hidden="true"></i>LOGOUT</a>
         </li>
 	</ul>
-
-    <!-- Navigation -->
    
 <!--slider-->
 
@@ -157,56 +160,51 @@
         
         
 
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail boxshadowsp"> <img src="images/product5.png" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h4 class="titlesp fontbold">Dolphin</h4>
-              <p class="fontbold font-colors">RO+UV+UF+TDS Controler</p>
-              <hr>
-              <p class="text-center"><a id="product5" href="#" class="preorderbtn btn btn-success" role="button">Pre-order Now</a></p>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div id="product6" class="thumbnail boxshadowsp">
+                <a href="/dolphinblue.html"><img src="images/product6.png" alt="Thumbnail Image 1" class="img-responsive"></a>
+                <div class="caption">
+                    <h4 class="titlesp fontbold">Dolphin Blue</h4>
+                    <p class="fontbold font-colors">RO+UV+UF+Mineral+Alkaline Option</p>
+                    <p class="card-offer"><i class="fa fa-gift" aria-hidden="true"></i>Pre-order at no cost. No Installation charges.</p>
+                    <hr>
+                    <button type="button" style="background-color: #0091ea;" class="btn btn-info waves-effect card-btn details-btn"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</button>
+                    <button type="button" style="background-color: #2e7d32;" class="btn btn-primary waves-effect card-btn preorder-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Pre-Order</button>
+                </div>
             </div>
-          </div>
         </div>
-		
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail boxshadowsp"> <img src="images/product1.png" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h4 class="titlesp fontbold">Dolphin</h4>
-              <p class="fontbold font-colors">RO+UV+UF+TDS Controler</p>
-              <hr>
-              <p class="text-center"><a id="product1" href="#" class="preorderbtn btn btn-success" role="button">Pre-order Now</a></p>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div id="product7" class="thumbnail boxshadowsp">
+                <a href="/dolphinblue.html"><img src="images/product7.png" alt="Thumbnail Image 1" class="img-responsive"></a>
+                <div class="caption">
+                    <h4 class="titlesp fontbold">Dolphin Black</h4>
+                    <p class="fontbold font-colors">RO+UV+UF+Mineral+Alkaline Option</p>
+                    <p class="card-offer"><i class="fa fa-gift" aria-hidden="true"></i>Pre-order at no cost. No Installation charges.</p>
+                    <hr>
+                    <button type="button" style="background-color: #0091ea;" class="btn btn-info waves-effect card-btn details-btn"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</button>
+                    <button type="button" style="background-color: #2e7d32;" class="btn btn-primary waves-effect card-btn preorder-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Pre-Order</button>
+                </div>
             </div>
-          </div>
         </div>
-		
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="thumbnail boxshadowsp"> <img src="images/product2.png" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h4 class="titlesp fontbold">Dolphin</h4>
-              <p class="fontbold font-colors">RO+UV+UF+TDS Controler</p>
-              <hr>
-              <p class="text-center"><a id="product2" href="#" class="preorderbtn btn btn-success" role="button">Pre-order Now</a></p>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <div id="product8" class="thumbnail boxshadowsp">
+                <a href="/dolphinblue.html"><img src="images/product8.png" alt="Thumbnail Image 1" class="img-responsive"></a>
+                <div class="caption">
+                    <h4 class="titlesp fontbold">Dolphin</h4>
+                    <p class="fontbold font-colors">RO+UV+UF+TDS Controler</p>
+                    <p class="card-offer"><i class="fa fa-gift" aria-hidden="true"></i>Pre-order at no cost. No Installation charges.</p>
+                    <hr>
+                    <button type="button" style="background-color: #0091ea;" class="btn btn-info waves-effect card-btn details-btn"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</button>
+                    <button type="button" style="background-color: #2e7d32;" class="btn btn-primary waves-effect card-btn preorder-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Pre-Order</button>
+                </div>
             </div>
-          </div>
         </div>
         
         
 	</div>
 	
-	
-		<div class="row iconbigsp">
-		<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 ">
-          <div class="thumbnail boxshadowsp"> <img src="images/product3.png" alt="Thumbnail Image 1" class="img-responsive">
-            <div class="caption">
-              <h4 class="titlesp fontbold">Dolphin</h4>
-              <p class="fontbold font-colors">RO+UV+UF+TDS Controler</p>
-              <hr>
-              <p class="text-center"><a id="product3" href="#" class="preorderbtn btn btn-success" role="button">Pre-order Now</a></p>
-            </div>
-          </div>
-        </div>
-		
-	</div>
 </div>
 
 <div class="container-fluid fixed-bg">
@@ -251,190 +249,135 @@
 
 
 <div class="container-fluid secthowitwork">
-<div class="titleline"><span class="titistyle">Customers Speak</span></div>
-	
-
-        
-        
-<div class="tcb-carousel-reviews">
-        <div class="container">
-            <div id="carousel-reviews" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
+    <div class="titleline"><span class="titistyle">Customers Speak</span></div>
+    <div class=" tcb-carousel-reviews">
+        <div class="row">
+            <div class="col-xs-11 col-md-10 col-centered">
+                <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="6000">
+                    <div class="container carousel-inner">
+                        
                         <div class="item active">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6">
+                            <div class="carousel-col">
                                     <div class="block-text ">
-                                        <a title="" href="#">Movie One</a>
-                                        <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat excepturi et aliquam quaerat nam fugit sequi minus ipsa autem laudantium. Accusantium officiis deserunt totam voluptate soluta veritatis expedita animi numquam! ...</p>
+                                        <a title="" href="#">Much needed Service!</a><br>
+                                        <p><br>It is so easy to get a brand new RO filter system installed at your home. Just book on the website, and say bye to the hassles of calling water can guy. Such Relief !</p>
                                         <ins class="sprite sprite-i-triangle"></ins>
                                     </div>
                                     <div class="person-text">
                                         <div class="reviewer">
-                                            <img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg" alt="">
+                                            <img class="img-responsive " src="images/cust4.png" alt="">
                                         </div>
-                                        <a title="" href="#">Someone Famous</a>
-                                        <i>United States</i>
+                                        <a title="" href="#">Shaurya Garg</a>
+                                        <i>Whitefield</i>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 hidden-xs">
-                                    <div class="block-text ">
-                                        <a title="" href="#">Movie Two</a>
-                                        <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span><span data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio odit dicta harum odio inventore vero, adipisicing elit quisquam adipisicing elit esse hic alias nisi. Blanditiis minima obcaecati vero sit eaque consectetur! Sit, odio incidunt.." </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" alt="">
-                                        </div>
-                                        <a title="" href="#">Someone Famous</a>
-                                        <i>United States</i>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-                                    <div class="block-text ">
-                                        <a title="" href="#">Movie Three</a>
-                                        <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span> </span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos voluptates, atque maiores iusto tenetur hic, dolore reprehenderit odit neque necessitatibus veritatis quasi rerum maxime eaque, officiis fugiat, aut quae commodi. </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
-                                        </div>
-                                        <a title="" href="#">Someone Famous</a>
-                                        <i>United States</i>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                        
                         <div class="item">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6">
+                            <div class="carousel-col">
                                     <div class="block-text ">
-                                        <a title="" href="#">Movie One</a>
-                                        <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat excepturi et aliquam quaerat nam fugit sequi minus ipsa autem laudantium. Accusantium officiis deserunt totam voluptate soluta veritatis expedita animi numquam! ...</p>
+                                        <a title="" href="#">I can trust every glass</a><br>
+                                        <p><br>Water cans are unreliable. I never knew the source of the water that I was drinking. After subscribing to BlueSip's RO system, I can trust every drop that I drink. </p>
                                         <ins class="sprite sprite-i-triangle"></ins>
                                     </div>
                                     <div class="person-text">
                                         <div class="reviewer">
-                                            <img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg" alt="">
+                                            <img class="img-responsive " src="images/cust1.png" alt="">
                                         </div>
-                                        <a title="" href="#">Someone Famous</a>
-                                        <i>United States</i>
+                                        <a title="" href="#">Sara Ather</a>
+                                        <i>Koramangala</i>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 hidden-xs">
-                                    <div class="block-text ">
-                                        <a title="" href="#">Movie Two</a>
-                                        <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span><span data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio odit dicta harum odio inventore vero, adipisicing elit quisquam adipisicing elit esse hic alias nisi. Blanditiis minima obcaecati vero sit eaque consectetur! Sit, odio incidunt.." </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" alt="">
-                                        </div>
-                                        <a title="" href="#">Someone Famous</a>
-                                        <i>United States</i>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-                                    <div class="block-text ">
-                                        <a title="" href="#">Movie Three</a>
-                                        <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span> </span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos voluptates, atque maiores iusto tenetur hic, dolore reprehenderit odit neque necessitatibus veritatis quasi rerum maxime eaque, officiis fugiat, aut quae commodi. </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
-                                        </div>
-                                        <a title="" href="#">Someone Famous</a>
-                                        <i>United States</i>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                        
                         <div class="item">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-6">
+                            <div class="carousel-col">
                                     <div class="block-text ">
-                                        <a title="" href="#">Movie One</a>
-                                        <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat excepturi et aliquam quaerat nam fugit sequi minus ipsa autem laudantium. Accusantium officiis deserunt totam voluptate soluta veritatis expedita animi numquam! ...</p>
+                                        <a title="" href="#">Within my budget</a><br>
+                                        <p><br>BlueSips provides different purifier models at different prices. I have chosen a plan that charges me as much as I would pay for water cans. Safe, reliable, and easy service at a price that I love!!  </p>
                                         <ins class="sprite sprite-i-triangle"></ins>
                                     </div>
                                     <div class="person-text">
                                         <div class="reviewer">
-                                            <img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/mantia/128.jpg" alt="">
+                                            <img class="img-responsive " src="images/cust2.png" alt="">
                                         </div>
-                                        <a title="" href="#">Someone Famous</a>
-                                        <i>United States</i>
+                                        <a title="" href="#">Iqra Kashmiri</a>
+                                        <i>Indiranagar</i>
                                     </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 hidden-xs">
-                                    <div class="block-text ">
-                                        <a title="" href="#">Movie Two</a>
-                                        <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star-empty"></span><span data-value="3" class="glyphicon glyphicon-star-empty"></span><span data-value="4" class="glyphicon glyphicon-star-empty"></span><span data-value="5" class="glyphicon glyphicon-star-empty"></span> </span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio odit dicta harum odio inventore vero, adipisicing elit quisquam adipisicing elit esse hic alias nisi. Blanditiis minima obcaecati vero sit eaque consectetur! Sit, odio incidunt.." </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg" alt="">
-                                        </div>
-                                        <a title="" href="#">Someone Famous</a>
-                                        <i>United States</i>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-6 hidden-sm hidden-xs">
-                                    <div class="block-text ">
-                                        <a title="" href="#">Movie Three</a>
-                                        <div class="mark">My rating: <span class="rating-input"><span data-value="0" class="glyphicon glyphicon-star"></span><span data-value="1" class="glyphicon glyphicon-star"></span><span data-value="2" class="glyphicon glyphicon-star"></span><span data-value="3" class="glyphicon glyphicon-star"></span><span data-value="4" class="glyphicon glyphicon-star"></span><span data-value="5" class="glyphicon glyphicon-star"></span> </span>
-                                        </div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos voluptates, atque maiores iusto tenetur hic, dolore reprehenderit odit neque necessitatibus veritatis quasi rerum maxime eaque, officiis fugiat, aut quae commodi. </p>
-                                        <ins class="sprite sprite-i-triangle"></ins>
-                                    </div>
-                                    <div class="person-text">
-                                        <div class="reviewer">
-                                            <img class="img-responsive " src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" alt="">
-                                        </div>
-                                        <a title="" href="#">Someone Famous</a>
-                                        <i>United States</i>
-                                    </div>
-                                </div>
                             </div>
                         </div>
+                        
+                        <div class="item">
+                            <div class="carousel-col">
+                                    <div class="block-text ">
+                                        <a title="" href="#">Free Maintenance</a><br>
+                                        <p><br>I love that I do not need to worry about signing a annual maintenance deal or call when I need a service. BlueSips provides free periodic services without spending a penny. Awesome!</p>
+                                        <ins class="sprite sprite-i-triangle"></ins>
+                                    </div>
+                                    <div class="person-text">
+                                        <div class="reviewer">
+                                            <img class="img-responsive " src="images/cust5.png" alt="">
+                                        </div>
+                                        <a title="" href="#">Prateek Bhiwapurkar</a>
+                                        <i>HSR Layout</i>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="carousel-col">
+                                    <div class="block-text ">
+                                        <a title="" href="#">No Investment</a><br>
+
+                                        <p><br>The biggest reason I didn't buy a RO system for home was the Rs. 20K + price tag on a reliable purifier. Add to that the yearly Rs. 4K - 5K in the name of maintenance. With BlueSips, I can pay a little amount monthly, without spending massive amount for the purifer and annual maintenance.  </p>
+                                        <ins class="sprite sprite-i-triangle"></ins>
+                                    </div>
+                                    <div class="person-text">
+                                        <div class="reviewer">
+                                            <img class="img-responsive " src="images/cust7.png" alt="">
+                                        </div>
+                                        <a title="" href="#">Vivek Vikram</a>
+                                        <i>Jayanagar</i>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item">
+                            <div class="carousel-col">
+                                   <div class="block-text ">
+                                        <a title="" href="#">Phenomenal Support</a><br>
+
+                                        <p><br>The best thing about BlueSips is the support. I can contact them via phone, or send them a direct message through Facebook or Whatsapp. These guys are super fast and delivering a great customer service. Kudos! </p>
+                                        <ins class="sprite sprite-i-triangle"></ins>
+                                    </div>
+                                    <div class="person-text">
+                                        <div class="reviewer">
+                                            <img class="img-responsive " src="images/cust6.png" alt="">
+                                        </div>
+                                        <a title="" href="#">Aditya Agarwala</a>
+                                        <i>BTM</i>
+                                    </div>
+                            </div>
+                        </div>
+                                   
                     </div>
-                    <a class="left carousel-control" href="#carousel-reviews" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-reviews" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                    </a>
+                    
+                    <div class="left carousel-control">
+                        <a href="#carousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </div>
+                    <div class="right carousel-control">
+                        <a href="#carousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
-        </div>
+            </div>
+        </div>        
     </div>
-
-
-
-		
-		
-		
-		
-		
-	
 </div>
 
 
@@ -526,17 +469,28 @@
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="js/preorder.js"></script>
     <script src="js/checklogin.js"></script>
+    <script src="js/carousal.js"></script>
     <script>
-        $('#signinbtn').click(function(){
-                localStorage.setItem('bs-login-redirect','catalogue.html')
+        $('.signinbtn').click(function(){
+                localStorage.setItem('bs-login-redirect','index.html')
                 window.location.href = "/auth.html";
             })
-        $('#signoutbtn').click(function(){
+        $('.signoutbtn').click(function(){
             firebase.auth().signOut().then(function() {
                 window.location.href = "/index.html";
             }, function(error) {
               console.log("Error signing out. Please try again later.")
             });
+        })
+        $('.details-btn').click(function(){
+            var pdtName = $(this).parent().parent().attr('id');
+            window.location.href="/"+pdtName+".html";
+        })
+
+        $('.preorder-btn').click(function(){
+            var pdtName = $(this).parent().parent().attr('id');
+            window.localStorage.setItem('bsPreOrderPdtId',pdtName);
+            window.location.href="/"+"confirmation"+".html";
         })
     </script>
 </body>
